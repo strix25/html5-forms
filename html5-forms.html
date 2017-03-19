@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Obrazci</title>
+  </head>
+  <body>
+    <h1>Vnos novega članka</h1>
+    <form method="post" enctype="text/plain" action="mailto:damjan.25@ghotmail.com">
+     <fieldset>
+      <legend>Obrazec za vnos</legend>
+      <label for="naslov">Vnesi naslov*:</label>
+      <input type="text" name="neka" id="naslov"  pattern="[A-Za-z]{3,}" placeholder="Privzeti naslov..." size="45" maxlength="12"   required>
+      <br>
+
+      <label for="clanek">Vsebina članka:*</label><br>
+      <textarea rows="7" cols="70" id="clanek" required></textarea><br>
+
+      <label>Izberi tip:*</label>
+      <select name="rubrika" required>
+        <option value="" disabled selected>--izberite tip--</option>
+        <option value="kronika">Kronika</option>
+        <option value="šport">Šport</option>
+        <option value="vreme">Vreme</option>
+      </select>
+      <br><br>
+
+      <label>Izberi datum objave:</label>
+      <input type="date" name="bday" max="2017-04-01" min="2016-01-01"><br><br>
+
+      <label for="mesto">mesto:</label>
+      <input type="text" name="mesto" id="mesto"  list="datalist1" placeholder="Mesto..." size="45" maxlength="12"   required>
+        <datalist id="datalist1">
+          <option value="Maribor">
+          <option value="Ljubljana">
+          <option value="Celje">
+          <option value="Ptuj">
+          <option value="Piran">
+        </datalist><br><br>
+
+      <fieldset>
+        <legend>Oblika strani</legend>
+        <label>Izberi datum objave:</label>
+        <input type="color" name="barva"><br><br>
+
+        <label>Število stolpcev:</label>
+        <input type="range" name="stolpci" min="1" max="5"><br><br>
+
+        <label>Izpostavi na naslovnici:</label>
+        <label for="da">Da</label>
+        <input type="radio" name="gender" value="da" id="da">
+        <label for="ne">Ne</label>
+        <input type="radio" name="gender" value="ne" id="ne"> <br><br>
+
+        Dovoli:<br>
+        <input type="checkbox" name="vehicle1" value="Bike" id="komentar"><label for="komentar">Komentiranje</label><br>
+        <input type="checkbox" name="vehicle1" value="Bike" id="ocena"><label for="ocena">Ocenjevanje</label><br>
+        <input type="checkbox" name="vehicle1" value="Bike" id="brisanje"><label for="brisanje">Brisanje komentarjev</label> <br><br>
+
+        <label>Število komentarjev na stran:</label>
+        <input type="number" name="stKomentarjev" step="5" max="40" min="0" value="5"><br><br>
+
+      </fieldset>
+      <br>
+
+      <label>Želen url članka*:</label>
+        <input type="url" name="url" required><br><br>
+
+      <label>Kontaktna oseba:</label>
+      <input type="email" name="email" placeholder="janez.novak@revija.com" id="posta"><br><br>
+      <input type="submit" value="pošlji"><input type="reset" value="Reset">
+     </fieldset>
+    </form>
+
+
+  </body>
+</html>
